@@ -13,7 +13,6 @@ class Program
 
         Console.WriteLine(Max(32, 10));
         Console.WriteLine(Max("beta", "alpha"));
-
     }
     public static T Max<T>(T a, T b) where T : IComparable<T>
     {

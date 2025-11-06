@@ -5,11 +5,13 @@ public class MagicCards
 {
     public string Name { get; set; }
     public string Type { get; set; }
+    public int Cost{ get; set; }
 
-    public MagicCard(string name, string type)
+    public MagicCard(string name, string type, int cost)
     {
         Name = name;
         Type = type;
+        Cost = cost;
     }
-    public override string ToString()=> $"{Name} ({Type})";
+    public override string ToString()=> $"{Name} ({Type} {Cost} mana)";
 }
