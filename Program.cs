@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Data.SqlTypes;
 using System.Security.Cryptography.X509Certificates;
 
 namespace modul2Oppgave1;
@@ -18,5 +19,4 @@ class Program
     {
         return a.CompareTo(b) > 0 ? a : b;
     }
-    
 }
