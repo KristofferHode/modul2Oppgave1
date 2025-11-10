@@ -7,24 +7,20 @@ public class CardHolder<T>
     {
         if (index < 0 || index >= 5)
             throw new IndexOutOfRangeException("index must be between 0 and 4");
+        
         cards[index] = card;
+        }
 
-    }
-
-    public T GetCard (int index)
+    public T GetCard(int index)
     {
         return cards[index];
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    public void PrintAll()
+    {
+        foreach (var card in cards)
+        {
+            Console.WriteLine(card);
+        }
+    }
 }

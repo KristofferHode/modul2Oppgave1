@@ -1,7 +1,7 @@
 using System.Reflection.Metadata.Ecma335;
 
 namespace modul2Oppgave1;
-public class MagicCards
+public class MagicCard
 {
     public string Name { get; set; }
     public string Type { get; set; }
