@@ -15,7 +15,8 @@ class Program
         holder.AddCard(new MagicCard("Llanowar Elves", "Creature", 1 ), 1);
         holder.AddCard(new MagicCard("Island", "Land", 0 ), 2);
         holder.AddCard(new MagicCard("Counterspell", "Instant", 2 ), 3);
-        holder.AddCard(new MagicCard("Serra Angel", "Creature", 5 ), 4);
+        holder.AddCard(new MagicCard("Serra Angel", "Creature", 5), 4);
+        holder.AddCard(new MagicCard("MadeupCard", "Instant", 1 ),80);
 
         holder.PrintAll();
     }
