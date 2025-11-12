@@ -26,7 +26,7 @@ public class Deck<T>
         }
     }
     public void Shuffle()
-    {
+    {//føles ikke riktig
         for (int i = cards.Count - 1; i > 0; i--)
         {
             int j = random.Next(i + 1);
