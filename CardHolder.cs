@@ -1,5 +1,5 @@
 namespace modul2Oppgave1;
-
+//gammel kode for å lage en deck holder som holder ett spesifikt antall kort
 public class CardHolder<T>
 {
     private T[] cards = new T[6];
