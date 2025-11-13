@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using Microsoft.VisualBasic;
 namespace modul2Oppgave1;
 public class Deck<T>
@@ -26,24 +27,22 @@ public class Deck<T>
         }
     }
     public void Shuffle()
-    {//føles ikke riktig
-        for (int i = cards.Count - 1; i > 0; i--)
-        {
-            int j = random.Next(i + 1);
-            T temp = cards[i];
-            cards[i] = cards[j];
-            cards[j] = temp;
-        }
+    {
+        Span<T> span = CollectionsMarshal.AsSpan(cards);
+
+        Random.Shared.Shuffle(span);
+        Console.WriteLine("Deck is shuffle..");
     }
+    
     public T Draw()
     {
-        if (cards.Count== 0)
+        if (cards.Count == 0)
         {
             throw new InvalidOperationException("Cant draw cards from an empty deck");
         }
-            T topCard = cards[0];
-            cards.RemoveAt(0);
-            return topCard;
+        T topCard = cards[0];
+        cards.RemoveAt(0);
+        return topCard;
     }
     public int Count => cards.Count;
     public void Clear()
