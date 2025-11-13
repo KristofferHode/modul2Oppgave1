@@ -17,9 +17,6 @@
   <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\modul2Oppgave1.csproj" />
-  </ItemGroup>
+  
 
 </Project>
